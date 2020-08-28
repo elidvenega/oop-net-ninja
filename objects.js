@@ -52,6 +52,13 @@ class User {
 }
 
 
+// inheritance
+class Admin extends User {
+    deleteUser() {
+
+    }
+}
+
 var userOne = new User('eli@SpeechGrammarList.com', 'eli');
 
 // userOne.login();
@@ -66,22 +73,22 @@ class ExampleName {
     }
 
     firstName() {
-        console.log(this.name, 'this is my first name');
+        console.log(this.name, 'is my first name');
         return this;
     }
 
     apellido() {
-        console.log(this.lastName, 'this is my last name');
+        console.log(this.lastName, 'is my last name');
         return this;
 
     }
 
-    result() {
-        console.log(this.name,this.lastName);
-        return this;
-    }
+    // result() {
+    //     console.log(this.name,this.lastName);
+    //     return this;
+    // }
 
 }
 
+
 var user = new ExampleName('elid', 'venega');
-user.firstName().apellido().result()
