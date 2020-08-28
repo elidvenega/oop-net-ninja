@@ -54,15 +54,34 @@ class User {
 
 var userOne = new User('eli@SpeechGrammarList.com', 'eli');
 
-userOne.login();
+// userOne.login();
 
 userOne.login().updateScore().updateScore().logout() // method chaining
 
+// practice 
+class ExampleName {
+    constructor(name, lastName) {
+        this.name = name;
+        this.lastName = lastName
+    }
 
+    firstName() {
+        console.log(this.name, 'this is my first name');
+        return this;
+    }
 
+    apellido() {
+        console.log(this.lastName, 'this is my last name');
+        return this;
 
+    }
 
+    result() {
+        console.log(this.name,this.lastName);
+        return this;
+    }
 
+}
 
-
-
+var user = new ExampleName('elid', 'venega');
+user.firstName().apellido().result()
