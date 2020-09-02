@@ -1,18 +1,18 @@
 // has properties and methods
 
-var userOne = {
-    email: 'ryu@ninjas.com',
-    name: 'Ryu',
-    login() {
-        console.log(this.email, 'has logged in');
-    },
-    logout() {
-        console.log(this.email, 'has logged out');
-    }
-};
+// var userOne = {
+//     email: 'ryu@ninjas.com',
+//     name: 'Ryu',
+//     login() {
+//         console.log(this.email, 'has logged in');
+//     },
+//     logout() {
+//         console.log(this.email, 'has logged out');
+//     }
+// };
 
-userOne.name = 'eli';
-console.log(userOne);
+// userOne.name = 'eli';
+// console.log(userOne);
 // userOne.login();
 // userOne.logout();
 
@@ -54,12 +54,24 @@ class User {
 
 // inheritance
 class Admin extends User {
-    deleteUser() {
-
+    deleteUser(user) {
+        users = users.filter(u => {
+            return u.email != user.email;
+        })
     }
 }
 
 var userOne = new User('eli@SpeechGrammarList.com', 'eli');
+var userTwo = new User('yoshi@mariokorp.com', 'Yoshi');
+var admin = new Admin('shaun@ninjas.com', 'sean');
+
+var users = [userOne, userTwo, admin]
+
+admin.deleteUser(userTwo);
+
+console.log(userTwo);
+
+
 
 // userOne.login();
 
@@ -92,3 +104,5 @@ class ExampleName {
 
 
 var user = new ExampleName('elid', 'venega');
+
+user.firstName().apellido();
