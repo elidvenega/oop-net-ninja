@@ -29,53 +29,52 @@
 
 // console.log(myExample);
 
-class User {
-    constructor(email, name) {
-        this.email = email;
-        this.name = name;
-        this.score = 0;
-    }
-    // methods are outside of constructor
-    login() {
-        console.log(this.email, 'just log in');
-        return this;
-    }
-    logout() {
-        console.log(this.email, 'just logged out');
-        return this;
-    }
-    updateScore() {
-        this.score++;
-        console.log(this.email, 'score is now', this.score);
-        return this;
-    }
-}
+// class User {
+//     constructor(email, name) {
+//         this.email = email;
+//         this.name = name;
+//         this.score = 0;
+//     }
+//     // methods are outside of constructor
+//     login() {
+//         console.log(this.email, 'just log in');
+//         return this;
+//     }
+//     logout() {
+//         console.log(this.email, 'just logged out');
+//         return this;
+//     }
+//     updateScore() {
+//         this.score++;
+//         console.log(this.email, 'score is now', this.score);
+//         return this;
+//     }
+// }
 
 
-// inheritance
-class Admin extends User {
-    deleteUser(user) {
-        users = users.filter(u => {
-            return u.email != user.email;
-        })
-    }
-}
+// // inheritance
+// class Admin extends User {
+//     deleteUser(user) {
+//         users = users.filter(u => {
+//             return u.email != user.email;
+//         })
+//     }
+// }
 
-var userOne = new User('eli@SpeechGrammarList.com', 'eli');
-var userTwo = new User('yoshi@mariokorp.com', 'Yoshi');
-var admin = new Admin('shaun@ninjas.com', 'sean');
+//
+// var admin = new Admin('shaun@ninjas.com', 'sean');
 
-var users = [userOne, userTwo, admin]
+// var users = [userOne, userTwo, admin]
 
-admin.deleteUser(userTwo);
+// admin.deleteUser(userOne);
 
-console.log(userTwo);
+// console.log(users);
 
 
 
 // userOne.login();
 
-userOne.login().updateScore().updateScore().logout() // method chaining
+// userOne.login().updateScore().updateScore().logout() // method chaining
 
 // practice 
 class ExampleName {
