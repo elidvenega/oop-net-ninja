@@ -1,33 +1,42 @@
-// has properties and methods
+//  every object has properties and methods
 
-// var userOne = {
-//     email: 'ryu@ninjas.com',
-//     name: 'Ryu',
-//     login() {
-//         console.log(this.email, 'has logged in');
-//     },
-//     logout() {
-//         console.log(this.email, 'has logged out');
-//     }
-// };
+var userOne = {
+    email: 'ryu@ninjas.com',
+    name: 'Ryu',
+    identity: 'unknown',
+    login() {
+        console.log(this.email, 'has logged in');
+    },
+    logout() {
+        console.log(this.email, 'has logged out');
+    },
+    noAccess() {
+        console.log(this.identity, 'identity unknown');
+    }
+};
 
-// userOne.name = 'eli';
-// console.log(userOne);
-// userOne.login();
-// userOne.logout();
+userOne.name = 'eli';
+console.log(userOne);
+userOne.login();
+userOne.logout();
+userOne.noAccess();
 
-// class Example{
-//     constructor(name){
+// class Example {
+//     constructor(name) {
 //         this.mission = name;
 //     }
 //     ex1() {
-//         return "oop begins and you become a master developer and get a job" + this.mission;
+//         return `${"oop begins and you become a master developer and get a job"} ${this.mission}`;
 //     }
 // }
 
 // myExample = new Example('and I will');
 
-// console.log(myExample);
+// function myExample () {
+//     return 'will get developer job';
+// }
+
+document.getElementById("mission").innerHTML = myExample();
 
 // class User {
 //     constructor(email, name) {
@@ -35,7 +44,7 @@
 //         this.name = name;
 //         this.score = 0;
 //     }
-//     // methods are outside of constructor
+//     methods are outside of constructor
 //     login() {
 //         console.log(this.email, 'just log in');
 //         return this;
@@ -52,7 +61,7 @@
 // }
 
 
-// // inheritance
+// inheritance
 // class Admin extends User {
 //     deleteUser(user) {
 //         users = users.filter(u => {
@@ -61,7 +70,7 @@
 //     }
 // }
 
-//
+
 // var admin = new Admin('shaun@ninjas.com', 'sean');
 
 // var users = [userOne, userTwo, admin]
@@ -74,34 +83,34 @@
 
 // userOne.login();
 
-// userOne.login().updateScore().updateScore().logout() // method chaining
+// userOne.login().updateScore().updateScore().logout() method chaining
 
-// practice 
-class ExampleName {
-    constructor(name, lastName) {
-        this.name = name;
-        this.lastName = lastName
-    }
+// practice
+// class ExampleName {
+//     constructor(name, lastName) {
+//         this.name = name;
+//         this.lastName = lastName
+//     }
 
-    firstName() {
-        console.log(this.name, 'is my first name');
-        return this;
-    }
+//     firstName() {
+//         console.log(this.name, 'is my first name');
+//         return this;
+//     }
 
-    apellido() {
-        console.log(this.lastName, 'is my last name');
-        return this;
+//     apellido() {
+//         console.log(this.lastName, 'is my last name');
+//         return this;
 
-    }
+//     }
 
-    // result() {
-    //     console.log(this.name,this.lastName);
-    //     return this;
-    // }
+//     // result() {
+//     //     console.log(this.name,this.lastName);
+//     //     return this;
+//     // }
 
-}
+// }
 
 
-var user = new ExampleName('elid', 'venega');
+// var user = new ExampleName('elid', 'venega');
 
-user.firstName().apellido();
+// user.firstName().apellido();
