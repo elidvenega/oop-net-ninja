@@ -1,6 +1,6 @@
 //  every object has properties and methods
 
-var userOne = {
+const userOne = {
     email: 'ryu@ninjas.com',
     name: 'Ryu',
     identity: 'unknown',
@@ -36,7 +36,7 @@ userOne.noAccess();
 //     return 'will get developer job';
 // }
 
-document.getElementById("mission").innerHTML = myExample();
+//document.getElementById("mission").innerHTML = myExample();
 
 // class User {
 //     constructor(email, name) {
@@ -86,31 +86,31 @@ document.getElementById("mission").innerHTML = myExample();
 // userOne.login().updateScore().updateScore().logout() method chaining
 
 // practice
-// class ExampleName {
-//     constructor(name, lastName) {
-//         this.name = name;
-//         this.lastName = lastName
-//     }
+class fullName {
+    constructor(name, lastName) {
+        this.name = name;
+        this.lastName = lastName
+    }
 
-//     firstName() {
-//         console.log(this.name, 'is my first name');
-//         return this;
-//     }
+    firstName() {
+        console.log(this.name, 'is my first name');
+        return this;
+    }
 
-//     apellido() {
-//         console.log(this.lastName, 'is my last name');
-//         return this;
+    lastNames() {
+        console.log(this.lastName, 'is my last name');
+        return this;
 
-//     }
+    }
 
-//     // result() {
-//     //     console.log(this.name,this.lastName);
-//     //     return this;
-//     // }
+    result() {
+        return this.firstName().lastNames()
+    }
 
-// }
+}
 
+const user = new fullName('elid', 'venega');
 
-// var user = new ExampleName('elid', 'venega');
+//user.result()
 
-// user.firstName().apellido();
+document.querySelector('#name').innerHTML = user.result();
