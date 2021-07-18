@@ -93,7 +93,7 @@ class fullName {
     }
 
     firstName() {
-        console.log(this.name, 'is my first name');
+        //console.log(this.name, 'is my first name');
         return this;
     }
 
