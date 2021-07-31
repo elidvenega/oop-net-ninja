@@ -113,4 +113,4 @@ const user = new fullName('elid', 'venega');
 
 //user.result()
 
-document.querySelector('#name').innerHTML = user.result();
+document.querySelector('#name').innerHTML = new.fullName();
