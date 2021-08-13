@@ -87,30 +87,31 @@ userOne.noAccess();
 
 // practice
 class fullName {
-    constructor(name, lastName) {
+    constructor(name,lastName) {
         this.name = name;
         this.lastName = lastName
     }
 
     firstName() {
         //console.log(this.name, 'is my first name');
-        return this;
+        return this.name;
     }
 
-    lastNames() {
-        console.log(this.lastName, 'is my last name');
-        return this;
+     lastNames() {
+       // console.log(this.lastName, 'is my last name');
+        return this.lastName;
 
-    }
+     }
 
     result() {
-        return this.firstName().lastNames()
+        return this.firstName(),this.lastNames()
     }
 
 }
 
-const user = new fullName('elid', 'venega');
+const user = new fullName('Elid','Venega');
 
 //user.result()
+console.log(user);
 
-document.querySelector('#name').innerHTML = new.fullName();
+document.querySelector('#name').innerHTML = user.result();
