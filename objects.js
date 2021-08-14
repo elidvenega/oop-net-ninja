@@ -15,28 +15,29 @@ const userOne = {
     }
 };
 
+userOne.email = 'eli@gmail.com';
 userOne.name = 'eli';
 console.log(userOne);
 userOne.login();
 userOne.logout();
 userOne.noAccess();
 
-// class Example {
-//     constructor(name) {
-//         this.mission = name;
-//     }
-//     ex1() {
-//         return `${"oop begins and you become a master developer and get a job"} ${this.mission}`;
-//     }
-// }
+class Goal {
+    constructor(missionGoal) {
+        this.mission = missionGoal;
+    }
+    missionObjective() {
+        return `${"OOP begins and you become a master developer and get a job"} ${this.mission}`;
+    }
+}
 
-// myExample = new Example('and I will');
+const myJourney = new Goal('and I will');
 
-// function myExample () {
+// function myExample() {
 //     return 'will get developer job';
 // }
 
-//document.getElementById("mission").innerHTML = myExample();
+document.getElementById("mission").innerHTML = myJourney.missionObjective();
 
 // class User {
 //     constructor(email, name) {
@@ -44,7 +45,7 @@ userOne.noAccess();
 //         this.name = name;
 //         this.score = 0;
 //     }
-//     methods are outside of constructor
+//     //methods are outside of constructor
 //     login() {
 //         console.log(this.email, 'just log in');
 //         return this;
@@ -60,8 +61,9 @@ userOne.noAccess();
 //     }
 // }
 
+// userOne.login().updateScore().updateScore().logout() //method chaining
 
-// inheritance
+//inheritance
 // class Admin extends User {
 //     deleteUser(user) {
 //         users = users.filter(u => {
@@ -71,9 +73,9 @@ userOne.noAccess();
 // }
 
 
-// var admin = new Admin('shaun@ninjas.com', 'sean');
+// let admin = new Admin('shaun@ninjas.com', 'sean');
 
-// var users = [userOne, userTwo, admin]
+// let users = [userOne, userTwo, admin]
 
 // admin.deleteUser(userOne);
 
@@ -83,11 +85,11 @@ userOne.noAccess();
 
 // userOne.login();
 
-// userOne.login().updateScore().updateScore().logout() method chaining
+
 
 // practice
 class fullName {
-    constructor(name,lastName) {
+    constructor(name, lastName) {
         this.name = name;
         this.lastName = lastName
     }
@@ -97,21 +99,22 @@ class fullName {
         return this.name;
     }
 
-     lastNames() {
-       // console.log(this.lastName, 'is my last name');
+    lastNames() {
+        // console.log(this.lastName, 'is my last name');
         return this.lastName;
 
-     }
+    }
 
     result() {
-        return this.firstName(),this.lastNames()
+        //return this.firstName() + this.lastNames();
+        return `${this.firstName()}  ${this.lastNames()}`;
     }
 
 }
 
-const user = new fullName('Elid','Venega');
+const user = new fullName('Elid', 'Venega');
 
-//user.result()
-console.log(user);
+// //user.result()
+// console.log(user);
 
-document.querySelector('#name').innerHTML = user.result();
+document.querySelector('#name').innerHTML = `${"My name is"} ${user.result()}`;
