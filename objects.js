@@ -39,29 +39,32 @@ const myJourney = new Goal('and I will');
 
 document.getElementById("mission").innerHTML = myJourney.missionObjective();
 
-// class User {
-//     constructor(email, name) {
-//         this.email = email;
-//         this.name = name;
-//         this.score = 0;
-//     }
-//     //methods are outside of constructor
-//     login() {
-//         console.log(this.email, 'just log in');
-//         return this;
-//     }
-//     logout() {
-//         console.log(this.email, 'just logged out');
-//         return this;
-//     }
-//     updateScore() {
-//         this.score++;
-//         console.log(this.email, 'score is now', this.score);
-//         return this;
-//     }
-// }
+// Method Chaining
+class User {
+    constructor(email, name) {
+        this.email = email;
+        this.name = name;
+        this.score = 0;
+    }
+    //methods are outside of constructor
+    login() {
+        console.log(this.email, 'just log in');
+        return this;
+    }
+    logout() {
+        console.log(this.email, 'just logged out');
+        return this;
+    }
+    updateScore() {
+        this.score++;
+        console.log(this.email, 'score is now', this.score);
+        return this;
+    }
+}
 
-// userOne.login().updateScore().updateScore().logout() //method chaining
+let userOne1 = new User('anime@gmail.com', 'Goku');
+
+userOne1.login().updateScore().updateScore().logout()
 
 //inheritance
 // class Admin extends User {
