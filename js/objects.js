@@ -22,22 +22,21 @@ userOne.login();
 userOne.logout();
 userOne.noAccess();
 
+// Class that represents end goal
 class Goal {
     constructor(missionGoal) {
         this.mission = missionGoal;
     }
     missionObjective() {
-        return `${"OOP begins and you become a master developer and get a job"} ${this.mission}`;
+        const goal = "OOP begins and you become a master developer and get a job";
+        return `${goal} ${this.mission}`;
     }
 }
 
-const myJourney = new Goal('and I will');
-
-// function myExample() {
-//     return 'will get developer job';
-// }
+const myJourney = new Goal('and I will.');
 
 document.getElementById("mission").innerHTML = myJourney.missionObjective();
+
 
 // Method Chaining
 class User {
