@@ -37,6 +37,21 @@ const myJourney = new Goal('and I will.');
 
 document.getElementById("mission").innerHTML = myJourney.missionObjective();
 
+// small example I created
+class hobby {
+    constructor(hobbies) {
+        this.hobbies = hobbies;
+    }
+
+    hobby1() {
+        const guitar = 'One of the things I enjoy most is playing';
+        return `${guitar} ${this.hobbies}`;
+    }
+}
+
+const fun = new hobby('guitar');
+document.querySelector("#hobby").innerHTML = fun.hobby1();
+
 
 // Method Chaining
 class User {
