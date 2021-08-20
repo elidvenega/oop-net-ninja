@@ -1,3 +1,4 @@
+// prototypes 
 function User(email, name, nationality) {
     this.email = email;
     this.name = name;
