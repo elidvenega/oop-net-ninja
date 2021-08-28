@@ -30,14 +30,15 @@ Admin.prototype.deleteUser = function () {
 }
 
 
-var userOne = new User("eli@SpeechGrammarList.com", "eli", "Mexican");
-var userTwo = new User("yoshi@mariokorp.com", "Yoshi", "Japenese");
-var admin = new Admin('shaun@ninjas.com', 'saun', "British");
+let userOne = new User("eli@SpeechGrammarList.com", "eli", "Mexican");
+let userTwo = new User("yoshi@mariokorp.com", "Yoshi", "Japenese");
+let admin = new Admin('shaun@ninjas.com', 'saun', "British");
 
-var users = [userOne, userTwo, admin];
+let users = [userOne, userTwo, admin];
 
 // console.log(userOne);
 userOne.signIn()
 userTwo.signOut()
 
 console.log(admin);
+console.log(users);

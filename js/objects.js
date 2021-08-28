@@ -135,3 +135,8 @@ const user = new fullName('Elid', 'Venega');
 // console.log(user);
 
 document.querySelector('#name').innerHTML = `${"My name is"} ${user.result()}`;
+
+// pics
+// let pic = `${https://hips.hearstapps.com/countryliving.cdnds.net/17/47/1511194376-cavachon-puppy-christmas.jpg}`;
+
+// document.querySelector('#puppy').innerHTML = pic;
