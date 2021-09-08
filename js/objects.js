@@ -106,9 +106,10 @@ userOne1.login().updateScore().updateScore().logout()
 
 // practice
 class fullName {
-    constructor(name, lastName) {
+    constructor(name, lastName,address) {
         this.name = name;
         this.lastName = lastName
+        this.address = address;
     }
 
     firstName() {
@@ -122,14 +123,18 @@ class fullName {
 
     }
 
+    addressHome() {
+        return this.address
+    }
+
     result() {
         //return this.firstName() + this.lastNames();
-        return `${this.firstName()}  ${this.lastNames()}`;
+        return `${this.firstName()}  ${this.lastNames()} ${this.addressHome()}`;
     }
 
 }
 
-const user = new fullName('Elid', 'Venega');
+const user = new fullName('Elid', 'Venega', '1040 Maple ST');
 
 // //user.result()
 // console.log(user);
