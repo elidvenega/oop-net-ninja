@@ -8,7 +8,9 @@ function User(email, name, nationality) {
 
 User.prototype.signIn = function () {
     this.online = true;
-    console.log(this.email, "has logged in", "and hes", this.nationality);
+    //console.log(this.email, "has logged in", "and hes", this.nationality);
+    //console.log(`${this.email} has logged in and hes ${this.nationality}`);
+    return `${this.email}`
 };
 
 
@@ -17,6 +19,7 @@ User.prototype.signOut = function () {
     console.log(this.email, "has logged out", "and hes", this.nationality);
 };
 
+// Prototype inheritance
 function Admin(...args) {
     User.apply(this, args)
 }
@@ -29,16 +32,18 @@ Admin.prototype.deleteUser = function () {
     });
 }
 
-
-let userOne = new User("eli@SpeechGrammarList.com", "eli", "Mexican");
+let userOne = new User("eli@.com", "eli", "Mexican");
 let userTwo = new User("yoshi@mariokorp.com", "Yoshi", "Japenese");
-let admin = new Admin('shaun@ninjas.com', 'saun', "British");
-
-let users = [userOne, userTwo, admin];
 
 // console.log(userOne);
+
+document.getElementById("name").innerHTML = userOne.signIn();
 userOne.signIn()
-userTwo.signOut()
+userOne.signOut()
+
+// Prototype inheritance
+let admin = new Admin('shaun@ninjas.com', 'saun', "British");
+let users = [userOne, userTwo, admin];
 
 console.log(admin);
 console.log(users);
