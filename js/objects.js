@@ -134,7 +134,7 @@ class fullName {
 
 }
 
-const user = new fullName('Elid', 'Venega', '1040 Maple ST');
+const user = new fullName('Eli', 'Abrajan', '40 Maple ST');
 
 // //user.result()
 // console.log(user);
