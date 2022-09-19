@@ -10,7 +10,7 @@ User.prototype.signIn = function () {
     this.online = true;
     //console.log(this.email, "has logged in", "and hes", this.nationality);
     //console.log(`${this.email} has logged in and hes ${this.nationality}`);
-    return `${this.email}`
+    return `${this.email} ${this.name} ${this.nationality}`
 };
 
 
